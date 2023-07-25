@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/CabeçalhoSuperior.Master" AutoEventWireup="true" CodeBehind="menuheader.master.cs" Inherits="Banco_onlline.NestedMasterPage1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .nav-item{
+            padding: 6px 40px;
+            color:white;
+        }
+        .nav-item-balance{
+            padding-left: 40px;
+        }
+        .nav-item-balance-val{
+            margin-right180px;
+            color:white;
+        }
+        .nav-item_logout{
+            padding-right: 5px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <div align="center" style="background-color:gray; width:auto; height:30px">
+        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="nav-item" NavigateUrl="PerformTransaction.aspx">Perform Transaction</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server" CssClass="nav-item" NavigateUrl="Credit.aspx">My Credit</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink3" runat="server" CssClass="nav-item" NavigateUrl="Debity.aspx">My Debity</asp:HyperLink>
+
+        <asp:Label ID="Label1" runat="server" Text="Balance" CssClass="nav-item-balance" Font-Bold="true"></asp:Label>
+        <asp:Label ID="lblBalance" runat="server" CssClass="nav-item-balance-val" Font-Bold="true" BorderColor:"GreemYellow" BorderWidth:"1px"></asp:Label>
+        <asp:Button ID="btnlogout" runat="server" Text="Logout" CssClass="nav-item-Logout" ForeColor="White" CausesValidation="false" BackColor="Red"
+            Height:"28px" OnClick="btnlogout_Click"/>
+    </div>
+
+    <asp:ContentPlaceHolder ID="ContentPH" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
